@@ -17,6 +17,13 @@
   },
   "devDependencies": {
     "mocha": "^5.1.1",
-    "supertest": "^3.0.0"
+    "supertest": "^3.0.0",
+    "chai": "^2.1.*",
+    "eslint": ">=4.2",
+    "htmltidy2": "^0.3.0",
+    "js-beautify": "^1.5.5",
+    "jsdom": "^13.1",
+    "matcha": "^0.6.0",
+    "sinon": "^7.3.2"
   }
 }

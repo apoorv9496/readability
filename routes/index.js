@@ -21,7 +21,7 @@ router.post('/view', function(req, res, next) {
   let article = new reader(doc.window.document).parse();
 
   res.status(200).send({
-    "url": article.url,
+    "url": req.body.url,
     "title": article.title,    
     "html": article.content,
     "description": article.excerpt,
