@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var reader = require('../mozilla_readability/Readability');
+var reader = require('./mozilla_readability/Readability');
 var JSDOM = require('jsdom').JSDOM;
 
 /* GET home page. */
