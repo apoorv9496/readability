@@ -2,6 +2,9 @@ var express = require('express');
 var router = express.Router();
 var reader = require('./Readability.js');
 var JSDOM = require('jsdom').JSDOM;
+var fetch = require('node-fetch');
+const {getMetadata} = require('page-metadata-parser');
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -9,23 +12,35 @@ router.get('/', function(req, res, next) {
 });
 
 /* GET home page. */
-router.post('/view', function(req, res, next) {
+router.post('/view', async function(req, res, next) {
   
-  console.log(req.body.html);
   console.log(req.body.url);
 
-  var doc = new JSDOM(req.body.html, {
+  const response = await fetch(req.body.url);
+  const html = await response.text();
+  var doc = new JSDOM(html, {
     url: req.body.url,
-  });  
+  });
+  
+  let metadata = null;
+  let content = null;
 
-  let article = new reader(doc.window.document).parse();
+  try {
+
+    metadata = getMetadata(doc.window.document, req.body.url);
+    //console.log(metadata);
+    article = new reader(doc.window.document).parse();
+
+    if(article !== null)
+      content = article.content;
+  } catch (error) {
+
+    console.log(error);
+  }
 
   res.status(200).send({
-    "url": req.body.url,
-    "title": article.title,    
-    "html": article.content,
-    "description": article.excerpt,
-    "byline": article.byline,
+    "article": content,
+    "meta": metadata
   });
 });
 
