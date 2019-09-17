@@ -15,6 +15,7 @@
     "jsdom": "^15.1.1",
     "morgan": "^1.9.1",
     "node-fetch": "^2.6.0",
+    "node-readability": "^3.0.0",
     "page-metadata-parser": "^1.1.4",
     "pug": "^2.0.4"
   },
