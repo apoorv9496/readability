@@ -1,0 +1,4 @@
+**/fixtures/*
+dist/*
+coverage/*
+karma.conf.js
