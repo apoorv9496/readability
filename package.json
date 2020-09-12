@@ -21,7 +21,7 @@
     "moment-parseformat": "^3.0.0",
     "moment-timezone": "^0.5.26",
     "morgan": "^1.9.1",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "node-readability": "^3.0.0",
     "page-metadata-parser": "^1.1.4",
     "postman-request": "^2.88.1-postman.15",
