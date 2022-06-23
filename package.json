@@ -16,7 +16,7 @@
     "ellipsize": "^0.1.0",
     "express": "~4.16.0",
     "http-errors": "~1.6.2",
-    "jsdom": "^15.1.1",
+    "jsdom": "^16.5.0",
     "mercury-parser": "^1.0.0",
     "moment-parseformat": "^3.0.0",
     "moment-timezone": "^0.5.26",
@@ -39,7 +39,7 @@
     "eslint": ">=4.2",
     "htmltidy2": "^0.3.0",
     "js-beautify": "^1.5.5",
-    "jsdom": "^13.1",
+    "jsdom": "^16.5",
     "matcha": "^0.6.0",
     "sinon": "^7.3.2"
   }
