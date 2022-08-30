@@ -19,7 +19,7 @@
     "jsdom": "^15.1.1",
     "mercury-parser": "^1.0.0",
     "moment-parseformat": "^3.0.0",
-    "moment-timezone": "^0.5.26",
+    "moment-timezone": "^0.5.35",
     "morgan": "^1.9.1",
     "node-fetch": "^2.6.0",
     "node-readability": "^3.0.0",
